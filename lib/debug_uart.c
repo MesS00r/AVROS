@@ -13,7 +13,9 @@ void debug_uputc(char ch) {
     UDR0 = ch;
 }
 
-void debug_uputs(const char str[static 1]) {
+void debug_uputs(const char *str) {
+    if (str == NULL) return;
+
     char ch;
     while ((ch = *str++)) {
         debug_uputc(ch);

@@ -16,10 +16,11 @@
     #include <avr/sfr_defs.h>
     #include <avr/io.h>
     #include <util/delay.h>
-
+    #include <stddef.h>
+    
     void debug_ubegin(void);
     void debug_uputc(char ch);
-    void debug_uputs(const char str[static 1]);
+    void debug_uputs(const char *str);
 
 #else
 
